@@ -15,6 +15,9 @@ jobs: # a collection of steps
           PGPASSWORD: ""
           RAILS_ENV: test
       - image: circleci/postgres:11 # database image
+        auth:
+            username: mydockerhub-user
+            password: $DOCKERHUB_PASSWORD
         environment: # environment variables for database, it is kind of obvious but it is important that they match with your test config in database.yml
           POSTGRES_USER: what_are_we_watching_be
           POSTGRES_DB: what_are_we_watching_be_test
