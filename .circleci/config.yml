@@ -14,7 +14,7 @@ jobs: # a collection of steps
           PGUSER: what_are_we_watching_be
           PGPASSWORD: ""
           RAILS_ENV: test
-      - image: circleci/postgres:11 # database image
+      - image: cimg/postgres:14.0 # database image
         auth:
             username: mydockerhub-user
             password: $DOCKERHUB_PASSWORD
