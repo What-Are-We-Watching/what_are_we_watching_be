@@ -57,7 +57,7 @@ workflows:
           post-steps:
             - run:
                 name: migrate
-                command: heroku run -a $what-are-we-watching-be rails db:migrate
+                command: heroku run -a what-are-we-watching-be rails db:migrate
           filters:
             branches:
               only:
