@@ -1,24 +1,117 @@
-# README
+<h2> End Points </h2>
+ 
+ <h4> Get Next Movie</h4>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```
+query NextMovie ($userid: Userid!, $eventid: Eventid!) {
+  user(userid: $userid) {
+    event(eventid: $eventid)
+ 		title
+ 		overview
+ 		image
+ 		movieid
+  }
+}
 
-Things you may want to cover:
+{
+  "userid": "12345",
+  "eventid": "67890"
+}
 
-* Ruby version
+{
+  "data": {
+    "title": "Get Smart"
+    "overview": "Blah blah blah"
+    "image": "steve_carrell.jpg"
+    "movieid": 211269
+  }
+}
+```
+  
+<h4> Vote on a Movie </h4>
 
-* System dependencies
+```
+mutation MovieVote($vote: vote!, $userid: Userid!, $eventid: Eventid!, $movieid: Movieid!) {
+  createVote(userid: $userid, eventid: $eventid, movieid: $movieid, vote: $vote) {
+  	vote
+  }
+}
 
-* Configuration
+{
+  "userid": "12345",
+  "eventid": "67890"
+  "movieid": "45450"
+  "vote": "no"
+}
 
-* Database creation
+{
+  "data": {
+	  "userid": "12345",
+	  "eventid": "67890"
+	  "movieid": "45450"
+	  "vote": "no"
+  }
+}
+```
+  
+<h4> Create an Event </h4>
 
-* Database initialization
+```
+mutation NewEvent($eventName: eventName!, $userid: Userid!) {
+  createEvent(eventName: $eventName, userid: $userid) {
+   	 eventname
+	}
+}
 
-* How to run the test suite
+{
+  "userid": "12345",
+  "eventName": "Drew's movie Fest"
+}
 
-* Services (job queues, cache servers, search engines, etc.)
+{
+  "data": {
+	  "userid": "12345",
+	  "eventName": "Drew's Movie Fest"
+  }
+}
+```
 
-* Deployment instructions
+<h4> Join an Event </h4>
 
-* ...
+```
+mutation JoinEvent($eventId: eventId!, $userid: Userid!) {
+  JoinEvent(eventId: $eventId, userid: $userid) {
+	}
+}
+
+{
+  "userid": "12345",
+  "eventId": "67890"
+}
+
+{
+  "data": {
+	  "userid": "12345",
+	  "eventId": "67890"
+  }
+}
+```
+
+<h4> Create a user</h4>
+
+```
+mutation CreateUser($userName: userName!) {
+  CreatUser(eventId: $userName, userName) {
+	}
+}
+
+{
+  "userName": "Drew123"
+}
+
+{
+  "data": {
+	  "userName": "Drew123"
+  }
+}
+```
