@@ -5,7 +5,6 @@ class MovieService
   def top_movies(page)
     response = conn.get("/3/movie/top_rated?&language=en-US&page=#{page}")
     json = parse_json(response)
-    binding.pry
     json[:results]
   end
 

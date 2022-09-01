@@ -14,5 +14,8 @@
 
 20.times do |i|
   movie = MovieFacade.new
-  seeds = movie.top_movie_seeding(i+1)
+  seed_info = movie.top_movie_seeding(i+1)
+  seed_info.each do |seed|
+    Movie.create(seed)
+  end
 end
