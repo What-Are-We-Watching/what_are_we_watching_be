@@ -13,5 +13,14 @@ module Types
     def test_field
       "Hello World!"
     end
+
+    field :events,
+    [Types::EventType],
+    null: false,
+    description: "Return a list of events"
+
+    def events
+      Event.all
+    end
   end
 end

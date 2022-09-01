@@ -48,6 +48,6 @@ class EventMoviesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def event_movie_params
-      params.require(:event_movie).permit(:events_id, :movies_id, :vote)
+      params.require(:event_movie).permit(:event_id, :movie_id, :vote)
     end
 end
