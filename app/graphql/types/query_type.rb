@@ -15,6 +15,13 @@ module Types
     # def event_movies(user_id, event_id)
     #   binding.pry
     # end
+    field :test_chunk, [Types::MovieType], null: false do
+    end
+
+    def test_chunk
+      Movie.where(id:5..15)
+    end
+
     field :get_chunk, [Types::EventMovieType], null: false do
       argument :user_id, ID, required: true
       argument :event_id, ID, required: true
