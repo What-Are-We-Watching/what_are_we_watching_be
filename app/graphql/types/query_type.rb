@@ -28,7 +28,7 @@ module Types
     end
 
     def get_chunk(user_id:, event_id:)
-      binding.pry
+
     end
 
     field :events,
