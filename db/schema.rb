@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2022_08_30_145748) do
   create_table "event_movies", force: :cascade do |t|
     t.bigint "event_id"
     t.bigint "movie_id"
-    t.integer "vote"
+    t.integer "vote", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["event_id"], name: "index_event_movies_on_event_id"
