@@ -8,5 +8,6 @@ module Types
     end
 
     field :create_event, mutation: Mutations::CreateEvent
+    field :create_user, mutation: Mutations::CreateUser
   end
 end
