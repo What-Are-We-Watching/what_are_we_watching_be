@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2022_08_30_145748) do
   end
 
   create_table "events", force: :cascade do |t|
-    t.datetime "date"
+    t.string "date"
     t.string "name"
     t.bigint "user_id"
     t.integer "movie_selection_id"
