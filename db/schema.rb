@@ -16,30 +16,29 @@ ActiveRecord::Schema.define(version: 2022_08_30_145748) do
   enable_extension "plpgsql"
 
   create_table "event_movies", force: :cascade do |t|
-    t.bigint "event_id"
-    t.bigint "movie_id"
+    t.bigint "events_id"
+    t.bigint "movies_id"
     t.integer "vote"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["event_id"], name: "index_event_movies_on_event_id"
-    t.index ["movie_id"], name: "index_event_movies_on_movie_id"
+    t.index ["events_id"], name: "index_event_movies_on_events_id"
+    t.index ["movies_id"], name: "index_event_movies_on_movies_id"
   end
 
   create_table "events", force: :cascade do |t|
     t.datetime "date"
     t.string "name"
-    t.bigint "user_id"
+    t.bigint "users_id"
     t.integer "movie_selection_id"
     t.integer "status", default: 0
     t.integer "guest_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_events_on_user_id"
+    t.index ["users_id"], name: "index_events_on_users_id"
   end
 
   create_table "movies", force: :cascade do |t|
     t.string "title"
-    t.string "overview"
     t.integer "moviedb_id"
     t.string "image"
     t.datetime "created_at", null: false
@@ -52,7 +51,7 @@ ActiveRecord::Schema.define(version: 2022_08_30_145748) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "event_movies", "events"
-  add_foreign_key "event_movies", "movies"
-  add_foreign_key "events", "users"
+  add_foreign_key "event_movies", "events", column: "events_id"
+  add_foreign_key "event_movies", "movies", column: "movies_id"
+  add_foreign_key "events", "users", column: "users_id"
 end

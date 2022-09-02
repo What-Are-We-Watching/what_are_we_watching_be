@@ -11,3 +11,11 @@
   movie = Movie.create!(title: Faker::Movie.title, overview: Faker::Movie.quote, moviedb_id:(i + 2 + 1), image: Faker::LoremFlickr.image)
   event_movie = EventMovie.create(movie_id: movie.id, event_id: event.id, vote: 0)
 end
+
+20.times do |i|
+  movie = MovieFacade.new
+  seed_info = movie.top_movie_seeding(i+1)
+  seed_info.each do |seed|
+    Movie.create(seed)
+  end
+end
