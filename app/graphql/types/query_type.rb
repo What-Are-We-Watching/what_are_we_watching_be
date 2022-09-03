@@ -23,11 +23,15 @@ module Types
     end
 
     field :get_chunk, [Types::EventMovieType], null: false do
-      argument :user_id, ID, required: true
       argument :event_id, ID, required: true
+      argument :last_movie_id, ID, required: true
     end
 
-    def get_chunk(user_id:, event_id:)
+    def get_chunk(event_id:, last_movie_id:)
+      Event.find(event_id)
+      .event_movies
+      .where(id: last_movie_id.to_i .. last_movie_id.to_i + 6)
+      # .where(id: last_movie_id..(last_movie_id.to_i+6))
 
     end
 
