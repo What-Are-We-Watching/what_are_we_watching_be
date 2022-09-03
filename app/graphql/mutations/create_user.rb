@@ -5,7 +5,7 @@ class Mutations::CreateUser < Mutations::BaseMutation
   field :errors, [String], null: false
 
   def resolve(name:)
-    user = User.new(name: name)
+    user = User.find_or_create_by(name: name)
     if user.save
       { user: user, errors: [] }
     else
