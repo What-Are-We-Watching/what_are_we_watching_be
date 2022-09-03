@@ -10,6 +10,9 @@ class Mutations::Vote < Mutations::BaseMutation
     movie = EventMovie.find_by(event_id: event_id, movie_id: movie_id)
     if vote == 'true'
       movie.vote += 1
+      movie.save
+      { event_movie: movie, errors: [] }
+    elsif vote == 'false'
       { event_movie: movie, errors: [] }
     else
       { event: nil, errors: event.errors.full_messages }
