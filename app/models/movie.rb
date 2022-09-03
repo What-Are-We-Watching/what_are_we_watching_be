@@ -4,7 +4,6 @@ class Movie < ApplicationRecord
   # has_one_attached :image
 
   validates_presence_of :title,
-                        :overview,
                         :image,
                         :moviedb_id
 end
