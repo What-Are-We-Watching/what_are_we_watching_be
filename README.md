@@ -97,21 +97,31 @@ mutation JoinEvent($eventId: eventId!, $userid: Userid!) {
 }
 ```
 
-<h4> Create a user</h4>
+<h4> Create/login a user</h4>
 
 ```
-mutation CreateUser($userName: userName!) {
-  CreatUser(eventId: $userName, userName) {
-	}
-}
 
-{
-  "userName": "Drew123"
-}
-
-{
-  "data": {
-	  "userName": "Drew123"
+mutation {
+  createUser(input: {
+    name: "Master Chief"
+  }) {
+    user {
+      name
+      id
+    }
+    errors
   }
+}
+
+{
+    "data": {
+        "createUser": {
+            "user": {
+                "name": "Master Chief",
+                "id": "13"
+            },
+            "errors": []
+        }
+    }
 }
 ```
