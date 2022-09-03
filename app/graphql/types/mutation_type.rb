@@ -9,5 +9,6 @@ module Types
 
     field :create_event, mutation: Mutations::CreateEvent
     field :create_user, mutation: Mutations::CreateUser
+    field :vote, mutation: Mutations::Vote
   end
 end
