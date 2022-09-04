@@ -24,6 +24,30 @@
 
 ```
 
+
+<h4> Get Chunk </h4>
+
+```
+ query getChunk($eventId: ID!, $lastMovieId: ID!){
+      getChunk (eventId: $eventId, lastMovieId: $lastMovieId){
+        id
+   		image
+    	title
+      }
+}
+
+{
+        "eventId": "2",
+        "lastMovieId": "4"
+}
+
+{
+    "data": {
+        "getChunk": []
+    }
+}
+```
+
 <h4> Create/login a user</h4>
 
 ```
