@@ -1,12 +1,6 @@
 <h2> End Points </h2>
  
- <h4> Get Next Movie</h4>
-
-```
-
-```
-  
-<h4> Vote on a Movie </h4>
+  <h4> Vote on a Movie </h4>
 
 ```
 
@@ -72,9 +66,45 @@ mutation createEvent($input: CreateEventInput!) {
 }
 
 {
-    "data": {
-        "getChunk": []
-    }
+  "data": {
+    "events": [
+      {
+        "date": "2023-06-23T12:00:00Z",
+        "status": 0,
+        "userId": 1,
+        "guestId": 4,
+        "movieSelectionId": null
+      },
+      {
+        "date": "2023-06-23T12:00:00Z",
+        "status": 0,
+        "userId": 4,
+        "guestId": 3,
+        "movieSelectionId": null
+      },
+      {
+        "date": "2023-06-23T12:00:00Z",
+        "status": 0,
+        "userId": 3,
+        "guestId": 2,
+        "movieSelectionId": null
+      },
+      {
+        "date": "2023-06-23T12:00:00Z",
+        "status": 0,
+        "userId": 2,
+        "guestId": 5,
+        "movieSelectionId": null
+      },
+      {
+        "date": "2023-06-23T12:00:00Z",
+        "status": 0,
+        "userId": 5,
+        "guestId": 1,
+        "movieSelectionId": null
+      }
+    ]
+  }
 }
 ```
 
