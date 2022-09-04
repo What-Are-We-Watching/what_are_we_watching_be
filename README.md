@@ -15,7 +15,37 @@
 <h4> Create an Event </h4>
 
 ```
+mutation createEvent($input: CreateEventInput!) {
+  createEvent(input: $input) {
+    event {
+      date
+      name
+      userId
+    }
+  }
+}
 
+
+{
+    "input": {
+        "date": "2022-09-04",
+        "name": "awesomeevent",
+        "userId": 2
+    }
+}
+
+
+{
+    "data": {
+        "createEvent": {
+            "event": {
+                "date": "2022-09-04T00:00:00Z",
+                "name": "awesomeevent",
+                "userId": 2
+            }
+        }
+    }
+}
 ```
 
 <h4> Join an Event </h4>
