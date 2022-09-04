@@ -28,6 +28,33 @@
 
 ```
 
+mutation createUser($input: CreateUserInput!) {
+  createUser(input: $input) {
+    user {
+      id
+      name
+    }
+  }
+}
+
+
+{
+    "input":{
+        "name": "Spider Man"
+    }
+}
+
+
+{
+    "data": {
+        "createUser": {
+            "user": {
+                "id": "24",
+                "name": "Spider Man"
+            }
+        }
+    }
+}
 ```
 
 <h4> Get all Events</h4>
