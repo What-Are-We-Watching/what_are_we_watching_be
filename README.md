@@ -3,7 +3,36 @@
   <h4> Vote on a Movie </h4>
 
 ```
+mutation vote($input: VoteInput!) {
+  vote(input: $input) {
+    eventMovie {
+        eventId
+        movieId
+        vote
+    }
+  }
+}
 
+{
+    "input": {
+        "eventId": 1,
+        "movieId": 1,
+        "vote": "true"
+    }
+}
+
+
+{
+    "data": {
+        "vote": {
+            "eventMovie": {
+                "eventId": 1,
+                "movieId": 1,
+                "vote": 9
+            }
+        }
+    }
+}
 ```
   
 <h4> Create an Event </h4>
