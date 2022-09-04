@@ -28,9 +28,9 @@ module Types
     end
 
     def get_chunk(event_id:, last_movie_id:)
-      Event.find(event_id)
+      Event.find(event_id.to_i)
       .event_movies
-      .where(id: last_movie_id.to_i .. last_movie_id.to_i + 6)
+      .where(movie_id: last_movie_id.to_i .. last_movie_id.to_i + 6)
       # .where(id: last_movie_id..(last_movie_id.to_i+6))
 
     end
