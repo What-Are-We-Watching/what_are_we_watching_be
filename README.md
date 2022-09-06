@@ -75,6 +75,40 @@ mutation createEvent($input: CreateEventInput!) {
 
 ```
 
+mutation joinEvent($input: JoinEventInput!) {
+  joinEvent(input: $input) {
+    event {
+      userId
+      guestId
+      id
+      name
+      status
+	   }
+  }
+}
+
+
+{
+  "input": {
+    "eventId": 1, 
+    "userId": 2
+  } 
+}
+
+
+{
+    "data": {
+        "joinEvent": {
+            "event": {
+                "userID": 1,
+                "guestId": 2,
+                "id": "1",
+                "name": "event_1",
+                "status": "1"
+            }
+        }
+    }
+}
 ```
 
 
