@@ -13,7 +13,6 @@ class MovieService
   def conn
     Faraday.new(url: "https://api.themoviedb.org") do |faraday|
       faraday.params['api_key'] = ENV['tmdb_api_key']
-      # faraday.params[:query] = param unless param.nil?
     end
   end
 
