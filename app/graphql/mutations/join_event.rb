@@ -8,7 +8,7 @@ class Mutations::JoinEvent < Mutations::BaseMutation
   
   def resolve(event_id:, user_id:, status:)
     event=Event.find(event_id)
-    event.update(guest_id: user_id, status: 2)
+    event.update(guest_id: user_id, status: 1)
 
     if (event.save)
       {
