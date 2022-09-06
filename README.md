@@ -218,3 +218,42 @@ mutation createUser($input: CreateUserInput!) {
   }
 }
 ```
+
+<h4> JoinEvent </h4>
+
+```
+
+mutation joinEvent($input: JoinEventInput!) {
+  joinEvent(input: $input) {
+    event {
+      guestId
+      id
+      name
+      status
+	 }
+  }
+}
+
+
+{
+  "input": {
+    "eventId": 1, 
+    "userId": 1,
+    "status": 1
+  } 
+}
+
+
+{
+    "data": {
+        "joinEvent": {
+            "event": {
+                "guestId": 1,
+                "id": "1",
+                "name": "event_1"
+                "status": "1"
+            }
+        }
+    }
+}
+```
