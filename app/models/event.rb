@@ -4,7 +4,7 @@ class Event < ApplicationRecord
   belongs_to :user
 
 
-  enum status: [:open, :pending, :full]
+  validates_presence_of :status
   validates_presence_of :name
   validates_presence_of :date
 
