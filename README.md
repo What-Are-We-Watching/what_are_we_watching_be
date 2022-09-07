@@ -1,3 +1,74 @@
+<h3 align="center">What Are We Watching?</h3>
+
+  <p align="center">
+    What_are_we_watching_be(WAWWbe) is an api responsible for storing and providing user information, event information, and associating specified users and events.  WAWWbe also collects a large selection of movies from the external API,TheMovieDatabase and provides those movies in small batches such that they can be shuttled to the user, one at a time. The user votes on whether they would like to watch this movie. Once two users have joined an event and both vote yes on a particular movie, WAWWbe notifies the client and associates the movie, users and the event and can provide this compiled data.</p> 
+
+---
+    
+### Setup of this application requires: <br>
+<ul>
+	<li>Creation of an API only Rails application</li>
+	<li>Installation of all supporting dependencies and gems</li>
+	<li>Installation of Graphql</li>
+	<li>Creation and Customization of Postgres database</li>
+</ul>
+<br>
+<h3> The following are a few syntax and content reminders that may save you time during your setup:</p> </h3>
+
+* To create a new rails app that is api-only execute: 
+```
+rails _5.2.8_ new what_are_we_watching_be --api --database=postgresql -T --skip-turbo-links --skip-spring
+```
+* Edit your Gem file to include all desired gems
+
+```
+## Stack & Gems
+
+* API mode
+* Ruby 2.7.4
+* Rails 5.2.8.1
+* GraphQL
+* Postgres
+* Puma 3.11
+* Handling CORS
+* Bootsnap 1.1.0
+* Faraday
+* Figaro
+* Simplecov
+* Launchy
+* Graphiql
+* RSpec-Rails
+* shoulda-matchers
+* Pry
+_(this list is representative of possible gems to utilize, it is not comprehensive)_
+```
+
+* Remember to the include the following into your rails_helper: 
+
+```
+
+Shoulda::Matchers.configure do |config|		require 'simplecov'
+config.integrate do |with|			SimpleCov.start
+with.test_framework :rspec
+with.library :rails
+end
+
+```
+
+* Install your gems
+
+```
+
+bundle install
+bundle exec figaro install
+
+```
+## RSpec testing framework
+* RSpec-Rails
+* shoulda-matchers
+* Pry
+
+
 <h2> End Points </h2>
  
   <h4> Vote on a Movie </h4>
