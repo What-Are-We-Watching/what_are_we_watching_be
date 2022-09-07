@@ -559,6 +559,78 @@
           null
         ]
       },
+      "/Users/drewproebstel/turing/4module/what_are_we_watching_be/spec/request/create_user_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/drewproebstel/turing/4module/what_are_we_watching_be/app/graphql/mutations/create_user.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/drewproebstel/turing/4module/what_are_we_watching_be/app/graphql/types/user_type.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/drewproebstel/turing/4module/what_are_we_watching_be/spec/request/create_vote_spec.rb": {
         "lines": [
           1,
@@ -682,28 +754,6 @@
           null,
           null,
           null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/drewproebstel/turing/4module/what_are_we_watching_be/app/graphql/types/user_type.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          0,
           null,
           null,
           null,
@@ -879,15 +929,15 @@
           null,
           null,
           1,
-          6,
-          6,
-          6,
-          6,
+          7,
+          7,
+          7,
+          7,
           null,
           null,
           null,
-          6,
-          6,
+          7,
+          7,
           null,
           0,
           0,
@@ -897,7 +947,7 @@
           null,
           null,
           1,
-          6,
+          7,
           null,
           0,
           0,
@@ -909,7 +959,7 @@
           null,
           0,
           null,
-          6,
+          7,
           null,
           0,
           null,
@@ -983,25 +1033,6 @@
           1,
           1,
           1,
-          null,
-          null
-        ]
-      },
-      "/Users/drewproebstel/turing/4module/what_are_we_watching_be/app/graphql/mutations/create_user.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
           null,
           null
         ]
@@ -1089,6 +1120,6 @@
         ]
       }
     },
-    "timestamp": 1662588661
+    "timestamp": 1662589761
   }
 }

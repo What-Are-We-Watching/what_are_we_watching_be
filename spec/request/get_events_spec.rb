@@ -31,6 +31,6 @@ RSpec.describe Types::EventType, type: :request do
         movieSelectionId
       }
     }
-GQL
-end
+    GQL
+  end
 end
