@@ -16,9 +16,9 @@ RSpec.describe Types::UserType, type: :request do
       json = JSON.parse(response.body)
       data = json['data']['getChunk']
 
-      expect(data[0]['image']).to eq("Movie.JPG")
-      expect(data[0]['id']).to eq("1")
-      expect(data[0]['title']).to eq("Shrek 4")
+      expect(data[0]['image']).to be_a(String)
+      expect(data[0]['id']).to be_a(String)
+      expect(data[0]['title']).to be_a(String)
 
     end
   end
